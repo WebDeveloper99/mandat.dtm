@@ -11,10 +11,12 @@ import Texnikum from '../pages/texnikum'
 
 
 import { Navigate, Route, Routes } from 'react-router-dom'
-import Students from '../components/bakalavr/students'
+import Batafsil from '../components/bakalavr/batafsil'
  
 
 const Root = () => {
+
+  
 
     return (
       <React.Fragment>
@@ -23,9 +25,8 @@ const Root = () => {
             <Route path={"/"} element={<Navbar />}>
               <Route path={"/"} element={<Footer />}>
                 <Route path={"/home"} element={<Home />} />
-                <Route path={"/bakalavr"} element={<Bakalavr />}>
-                  <Route path='/bakalavr/students' element={<Students/>} />
-                </Route>
+                <Route index path={'/bakalavr'} element={<Bakalavr />} />
+                <Route path='/bakalavr/:id' element={<Batafsil/>} />
                 <Route path={"/magistr"} element={<Magistr />} />
                 <Route path={"/transfer"} element={<Transfer />} />
                 <Route path={"/texnikum"} element={<Texnikum />} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import {
   BooContainer,
   Wrapper,
@@ -15,7 +16,7 @@ import {
 
 // -----------
 
-import { Popover, Button } from 'antd'
+import { Popover } from 'antd'
 
 const buttonWidth = 1170
 
@@ -249,6 +250,9 @@ const content1 = (
 // -----------Selected--------------------------
 
 const Students = () => {
+  
+  const navigate = useNavigate()
+
   const onFinish = (values) => {
     console.log('Received values of form: ', values)
   }
@@ -400,7 +404,12 @@ const Students = () => {
                     content={content1}
                     trigger="click"
                   >
-                    <AntButton style={{background:"#bee5", borderColor: "#999"}} >Imtiyozli</AntButton>
+                    <AntButton 
+                    style={{
+                      background:"#bee5", 
+                      borderColor: "#999"
+                    }}
+                     >Imtiyozli</AntButton>
                   </Popover>
                 </div>
               </div>

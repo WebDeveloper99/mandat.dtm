@@ -1,13 +1,17 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import Students from './students'
+import AboutStudents from './aboutStudents'
 
 const InfoBakalavr = () => {
-  return (
-    <Routes>
-        <Route path={'/students'} >
+    
+    const { students } = useParams();
 
-        </Route>
-    </Routes>
+  return (
+      <div>
+          <Students/>
+          <AboutStudents/>
+      </div>
   )
 }
 

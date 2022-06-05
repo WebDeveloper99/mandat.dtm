@@ -1,13 +1,13 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import Students from '../../components/bakalavr/students'
+import InfoBakalavr from '../../components/bakalavr';
 
 const Bakalavr = () => {
   const location = useLocation();
   return (
     <div>
       {location.pathname}
-      <Students/>
+      <InfoBakalavr/>
     </div>
   )
 }
